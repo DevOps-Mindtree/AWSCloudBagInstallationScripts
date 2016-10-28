@@ -12,6 +12,6 @@ echo "export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64/" >> /etc/opt/jfrog/art
 sed -i -e 's/8081/8080/' /opt/artifactory-oss-4.14.0/tomcat/conf/server.xml 
 service artifactory check 
 chmod -R 500 ~/.bashrc 
-echo 'GRADLE_OPTS=\" -XX:MaxPermSize=512m\"' >>  ~/.bashrc  
+echo 'GRADLE_OPTS=" -XX:MaxPermSize=512m"' >>  ~/.bashrc  
 ~/.bashrc 
 service artifactory start 
